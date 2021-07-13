@@ -16,11 +16,11 @@
 <code><img height="50" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 
 <h2>기능구현 체크리스트</h2>
-- [ ] 일기장 CRUD 구현 <br>
-- [ ] 헤더에서 검색하거나 검색 페이지 구현 <br>
-- [ ] 웹 퍼블리싱 <br>
-- [ ] 갤러리  구현 <br>
-- [ ] Google 소셜 로그인 기능 구현 <br>
+[x] 일기장 CRUD 구현 <br>
+[x] 헤더에서 검색하거나 검색 페이지 구현 <br>
+[x] 웹 퍼블리싱 <br>
+[x] 갤러리  구현 <br>
+[x] Google 소셜 로그인 기능 구현 <br>
 
 <h2>서버실행법</h2>
 1. manage.py이 있는 파일에 들어가서 VScode를 실행한다. <br>
