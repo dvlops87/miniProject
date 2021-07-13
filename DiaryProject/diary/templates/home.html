@@ -1,0 +1,39 @@
+<!-- 필수요구사항: 개인Repo를통해만들기. - 일기장은Pagination으로3장씩출력하기
+- 일기장생성/ 삭제/ 디테일/ 리스트페이지구현
+- 일기장에는제목/ 사진/ 내용/ 생성날짜/ 날씨있어야함. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for diaryDetail in diary %}
+    <div>
+        <span>제목 : {{diaryDetail.title}}</span><br>
+        <span>사진 : <img src="{{diaryDetail.photo.url}}" width="200" height="200" ></span><br>
+        <a href="{% url 'detail' diaryDetail.id %}">
+            자세히 보기
+        </a><br>
+    </div>
+    {% endfor %}
+    <div>
+        {% if diary.has_previous %}
+        <a href='?page={{diary.previous_page_number}}'><</a>
+        {% endif %}
+
+        <span>{{diary.number}}</span>
+        <span>/</span>
+        <span>{{diary.paginator.num_pages}}</span>
+        
+        {% if diary.has_next %}
+        <a href='?page={{diary.next_page_number}}'>></a>
+        {% endif %}
+    </div>
+    <a href="{% url 'goAdd' %}">
+        새 일기 쓰기
+    </a>
+</body>
+</html>
