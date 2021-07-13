@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls.conf import include
 from diary import views as d
 
 urlpatterns = [
@@ -26,4 +27,9 @@ urlpatterns = [
     path('add/', d.add, name='add'),
     path('detail/<str:id>', d.detail, name='detail'),
     path('delete/<str:id>', d.delete, name='delete'),
+    path('gallery/', d.gallery, name='gallery'),
+    path('search/', d.search, name='search'),
+
+    path('accounts/', include('allauth.urls')),
+    path('logout/',d.user_logout, name='logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
