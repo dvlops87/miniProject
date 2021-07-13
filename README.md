@@ -21,9 +21,6 @@
 - [  ] 웹 퍼블리싱 <br>
 - [  ] Google 소셜 로그인 기능 구현 <br>
 
-<h2>데이터베이스 UML</h2>
-<img src="https://user-images.githubusercontent.com/73010472/124298739-9453da00-db97-11eb-9cb4-178017b8f24d.PNG"  width="500" height="500">
-
 <h2>서버실행법</h2>
 1. manage.py이 있는 파일에 들어가서 VScode를 실행한다. <br>
 2. '. venv/Scripts/activate'를 입력해 가상환경을 활성화 한다. <br>
